@@ -18,7 +18,7 @@ const projects = [
         title: "Lumen",
         desc: "Advanced data visualization dashboard for distributed systems.",
         img: "/ProjectImages/Lumen_image.jpeg",
-        tech: ["React", "D3.js", "Node.js"],
+        tech: ["Next JS", "MongoDB", "Node.js"],
         links: {
             demo: "#",
             code: "#",
@@ -29,7 +29,7 @@ const projects = [
         title: "Medcare",
         desc: "Comprehensive healthcare management platform with patient tracking.",
         img: "/ProjectImages/Medcare_image.jpeg",
-        tech: ["MERN Stack", "Socket.io"],
+        tech: ["MERN Stack"],
         links: {
             demo: "#",
             code: "https://github.com/shubh-a11y/Hospital-Management",
