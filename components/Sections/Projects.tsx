@@ -4,6 +4,17 @@ import { Github, Play, ExternalLink } from 'lucide-react';
 
 const projects = [
     {
+        title: "My Portfolio Website",
+        desc: "A personal portfolio website to showcase my skills, projects, and experiences.",
+        img: "/ProjectImages/Portfolio_image.png",
+        tech: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
+        links: {
+            demo: "https://portfolio10-six.vercel.app/",
+            code: "https://github.com/shubh-a11y/Portfolio.git",
+            video: "https://portfolio10-six.vercel.app/"
+        }
+    },
+    {
         title: "ChainCred",
         desc: "A blockchain-based trust verification system using smart contracts.",
         img: "/ProjectImages/Chaincred_image.jpeg",
