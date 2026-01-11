@@ -1,0 +1,163 @@
+
+"use client";
+import { useState, useRef, useEffect, FormEvent, ChangeEvent } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Send, Bot, User } from "lucide-react";
+
+interface Message {
+  role: "user" | "ai";
+  content: string;
+}
+
+export default function ChatInterface() {
+  const [input, setInput] = useState<string>("");
+  const [messages, setMessages] = useState<Message[]>([
+    { role: "ai", content: "Hello! Ask me anything about Shubhang's skills, projects, poetries or experience." }
+  ]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Add this new ref
+const scrollAreaRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+
+    if(scrollAreaRef.current){
+      const scrollContainer = scrollAreaRef.current;
+
+      scrollContainer.scrollTo({
+        top: scrollContainer.scrollHeight,
+        behavior: "smooth"
+      })
+
+    }
+
+    
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+
+    const userMessage = input;
+    setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
+    setInput("");
+    setIsLoading(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userMessage }),
+      });
+
+      const data = await res.json();
+      setMessages((prev) => [...prev, { role: "ai", content: data.text || "Sorry, I couldn't process that." }]);
+    } catch (error) {
+      setMessages((prev) => [...prev, { role: "ai", content: "Error: Connection lost. Please try again." }]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="relative h-full w-full flex flex-col bg-linear-to-br from-zinc-900 to-black border border-zinc-800 rounded-2xl overflow-hidden">
+      {/* Header */}
+      <div className="bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-800 px-6 py-4">
+        <div className="flex items-center gap-3">
+          <div className="p-2 bg-accent/10 rounded-lg border border-accent/20">
+            <Bot className="w-5 h-5 text-accent" />
+          </div>
+          <div>
+            <h3 className="font-mono text-sm text-accent">Shubhang&apos;s AI Voice</h3>
+            <p className="text-xs text-zinc-500">Powered by RAG</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Messages Area */}
+      <div className="flex-1 overflow-y-auto p-6 space-y-4 scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-transparent" ref = {scrollAreaRef}>
+        <AnimatePresence initial={false}>
+          {messages.map((msg, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className={`flex gap-3 ${msg.role === "user" ? "flex-row-reverse" : "flex-row"}`}
+            >
+              {/* Avatar */}
+              <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center border ${
+                msg.role === "user" 
+                  ? "bg-accent/10 border-accent/20" 
+                  : "bg-zinc-800 border-zinc-700"
+              }`}>
+                {msg.role === "user" ? (
+                  <User className="w-4 h-4 text-accent" />
+                ) : (
+                  <Bot className="w-4 h-4 text-zinc-400" />
+                )}
+              </div>
+
+              {/* Message Bubble */}
+              <div className={`max-w-[80%] px-4 py-3 rounded-xl ${
+                msg.role === "user"
+                  ? "bg-accent/10 border border-accent/20 text-white"
+                  : "bg-zinc-800/50 border border-zinc-700 text-zinc-300"
+              }`}>
+                <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex gap-3"
+          >
+            <div className="w-8 h-8 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center">
+              <Bot className="w-4 h-4 text-zinc-400" />
+            </div>
+            <div className="bg-zinc-800/50 border border-zinc-700 px-4 py-3 rounded-xl">
+              <div className="flex gap-1">
+                <span className="w-2 h-2 bg-zinc-600 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></span>
+                <span className="w-2 h-2 bg-zinc-600 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></span>
+                <span className="w-2 h-2 bg-zinc-600 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></span>
+              </div>
+            </div>
+          </motion.div>
+        )}
+        <div ref={messagesEndRef} />
+      </div>
+
+      {/* Input Area */}
+      <div className="border-t border-zinc-800 bg-zinc-900/80 backdrop-blur-sm p-4">
+        <form onSubmit={sendMessage} className="flex gap-2">
+          <input
+            type="text"
+            value={input}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
+            placeholder="Ask about skills, projects..."
+            disabled={isLoading}
+            className="flex-1 bg-zinc-800/50 border border-zinc-700 text-white placeholder-zinc-500 px-4 py-3 rounded-lg outline-none focus:border-accent/50 focus:bg-zinc-800 transition-all font-mono text-sm disabled:opacity-50"
+          />
+          <button
+            type="submit"
+            disabled={isLoading || !input.trim()}
+            className="bg-accent hover:bg-accent/80 disabled:bg-zinc-700 disabled:cursor-not-allowed text-black font-bold px-5 py-3 rounded-lg transition-all flex items-center gap-2 group"
+          >
+            <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          </button>
+        </form>
+        <p className="text-xs text-zinc-600 mt-2 font-mono">Powered by Pinecone + LangChain</p>
+      </div>
+    </div>
+  );
+}

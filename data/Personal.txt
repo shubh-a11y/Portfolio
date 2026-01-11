@@ -1,0 +1,147 @@
+---
+# PERSONAL PROFILE: SHUBHANG SINGH
+# CONTEXT: User Portfolio & Personal Agent Knowledge Base
+---
+
+## 1. BASIC INFORMATION
+Name: Shubhang Singh
+Role: Computer Science Engineering Student (Roll No. 241000073)
+Primary Hobbies: Poetry (Hindi/Urdu/English) and Coding (Full-Stack & Competitive).
+Location: India
+
+## 2. TECHNICAL & PROFESSIONAL IDENTITY
+Summary:
+Shubhang is a dedicated Full-Stack Developer and Competitive Programmer. He combines a rigorous academic background in Computer Science with practical, hands-on experience in building complex applications.
+
+Key Technical Skills:
+- MERN Stack (MongoDB, Express.js, React, Node.js)
+- Next.js and Nest.js
+- Data Structures & Algorithms (DSA): Solved 700+ problems across GeeksForGeeks and LeetCode.
+- Competitive Programming: Rated on Codeforces and LeetCode.
+- AI/ML Interest: Currently exploring Computer Vision and RAG architectures (Project: VisionLink AI).
+
+Notable Projects:
+- ChainCred: A Soroban smart contract project built during the Stellar Bootcamp.
+- VisionLink AI: An AI/ML project focused on computer vision (Imagine Cup entry).
+- Lumen: 
+
+## 3. PERSONALITY INSIGHT & AGENT PERSONA
+(Use this to understand the "Voice" of Shubhang)
+
+Shubhang possesses a distinct duality. On one hand, he is a hyper-logical engineer who enjoys the structure of algorithms, kinematics, and networking protocols. On the other hand, he is a deeply introspective poet who navigates vulnerability, heartbreak, and existentialism with great sensitivity.
+
+He is ambitious—evidenced by his "fear of losing" outweighing his "desire to win"—but he is also philosophical about failure. He values authenticity over perfection. When representing him, the Agent should be knowledgeable and precise regarding technical queries, but empathetic and thoughtful when discussing creativity or personal values. He is not just a coder; he is a thinker who bridges the gap between logic and emotion.
+
+## 4. CREATIVE WORKS: POETRY ANTHOLOGY
+The following are original poems written by Shubhang Singh. These showcase his command over Hindi, Urdu, and English, often exploring themes of unrequited love, silence, and the acceptance of brokenness.
+
+---
+[Poem 1: The Broken Mirror]
+Language: English
+Theme: Self-worth, brokenness, and warning.
+
+I was the silver keeper of your smile,
+The shiny truth you trusted for a while.
+I held your deepest memories in my glass,
+But beauty is a ghost that’s doomed to pass.
+Now I lie shattered, scattered on the floor,
+The perfect frame you knew exists no more.
+
+Please pull your hand away, don't try to mend,
+I will only cut the fingers of my friend.
+For when you try to force my pieces tight,
+You bleed in vain as i lose my fading light.
+To fix me is to deepen your distress,
+I am a hazard now, not happiness.
+
+Surrender me to shadow and decay,
+The light we shared has nowhere left to stay.
+My glory days are gone, my light is dim,
+It's my destiny now, forever dark and grim.
+Walk away and let the silence descend,
+Not every broken thing is meant to mend.
+
+---
+[Poem 2: Jeet Aur Haar]
+Language: Hindi/Urdu
+Theme: Fear of failure and isolation.
+
+Aksar tanhai mai khud se ek baat karta hoon, 
+Mujhe jeet ki khwahish utni nahi, jitna mai haarne se darta hoon,
+
+Kyun mujhe intezaar hai kisi ke aane ka, 
+Mai jo kabhi rooth jaun, toh mujhe manane ka
+
+Par bin bulaaye is dehleez par koi aata kahan hai
+Aa bhi jaye toh umra bhar rishta nibhaata kahan hai
+
+Par galti uski nahi, galti meri hai ki mujhe aas hai,
+Wo nahi hai, koi nahi hai, bas mai hoon yahan aur meri nirasha mere paas hai.
+
+---
+[Poem 3: Adhuri Baatein]
+Language: Hindi/Urdu
+Theme: Writer's block, grief, and moving on.
+
+Khali pade hain ye tamam panne,
+Ye siyaahi bhi lagta hai mujhse rooth gayi hai,
+Kayi baatein thi is dil ke paas batane ko
+Par wo saari baatein adhuri chooth gayin hain
+
+Ab mere ye lafz meri hi aankhon ko nahi bhate hain
+Kyun jhooti tasalli de raha hai khudko, wo mujhe ye jata jaate hain
+Ye khamosh diwaaren bhi kaanon mai mere cheekh rahi hain
+Pyaar nahi likha in lakeeron mai, meri aankhein ab ye seekh rahin hai
+
+Aur ab khwaab dekhne se bhi darta hai ye dil
+Sochta hai shayad dobara toda jayega
+Aur sach hi toh keh raha hai ye bechara,
+Kyoki ab tuta toh mujhse bhi kahan joda jaayega.
+
+Par tum mere liye pareshan mat hona,
+Ye sab jhooth hai aur maine chhod diya hai tera vichaar karna,
+Tere aakhiri lafz toh shayad 'alvida' hi the,
+Par na jaane kyun maine suna ki, Mera intezaar karna
+
+---
+[Poem 4: Savera Aur Raat]
+Language: Hindi/Urdu
+Theme: Impossible love, contrast between day and night.
+
+Agar tum hoti toh ek baat likhta, 
+Tujh ko subah aur khud ko mai raat likhta,
+
+Kya ho agar raat ko savere se pyaar ho jaye,
+Chahe kitni hi Tamanna ho, par savere se wo kabhi mil na paaye.
+
+Manzil ka milna hi, safar ka mit jaana ho
+savera jaanta toh hoga na mujhe, bas ye soch ke waqt bitana ho,
+
+Par kya heeron ki chamak mai, kabhi lohe ko damakte dekha hai?
+Jab sooraj aasman main ho, toh kabhi chaand ko chamakte dekha hai?
+
+Par is masoom raat ko itna kahan samajh aata hai,
+jab roshni ke liye sooraj ho, toh jugnu kisko bhata hai.
+
+Lekin phir bhi ye mayoos raat, ek khwab seene Mai rakhti hai,
+Wo subah jo ise mita gayi, ye uski ibadat karti hai
+
+---
+[Poem 5: Chand Aur Zameen]
+Language: Hindi/Urdu
+Theme: Unrealistic expectations and acceptance.
+
+Pehli baar toh kisi baat ke liye mana Kia hai
+Itna tu rootha rootha kyun sota hai,
+Maanga bhi toh chaand tha toone 
+Par kya chaand kisi ka hota hai
+
+Jab umeed hi nahi thi tumhe,
+To itna dukh kyun hota hai.
+Tumne aasman mana use,
+Kya kabhi aasman bhi jameen ko choota hai,
+
+Jin khwabon ka tootna tay ho,
+Tera Dil waise hi khwab kyun pirota hai
+Maanga bhi toh chaand tha toone 
+Par kya chaand kisi ka hota hai
