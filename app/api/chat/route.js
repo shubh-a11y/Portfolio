@@ -18,7 +18,7 @@ export async function POST(req) {
 
     // 2. Setup Google Embeddings (For searching)
     const embeddings = new GoogleGenerativeAIEmbeddings({
-      model: "text-embedding-004",
+      model: "gemini-embedding-001",
       taskType: TaskType.RETRIEVAL_QUERY,
       apiKey: process.env.GOOGLE_API_KEY,
     });
@@ -26,6 +26,9 @@ export async function POST(req) {
     // 3. Connect to Pinecone (The Memory)
     const pinecone = new Pinecone({ apiKey: process.env.PINECONE_API_KEY });
     const pineconeIndex = pinecone.Index(process.env.PINECONE_INDEX);
+
+    console.log("Embedding model =", embeddings.model);
+    console.log("Route file loaded");
 
     const vectorStore = await PineconeStore.fromExistingIndex(embeddings, {
       pineconeIndex: pineconeIndex,
@@ -70,7 +73,7 @@ export async function POST(req) {
     const response = await chatModel.invoke(prompt);
 
     // 7. Send back the text
-    return NextResponse.json({ 
+    return NextResponse.json({
       text: response.content,
       // Optional: Send back the source so you can debug what it found
       source: results.length > 0 ? "Vector DB" : "None"
