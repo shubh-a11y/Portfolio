@@ -1,3 +1,5 @@
+// SequencePlayer.tsx
+
 'use client';
 
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -96,7 +98,7 @@ export default function SequencePlayer({ onLoadComplete, children }: { onLoadCom
             <div className="sticky top-0 h-screen w-full overflow-hidden bg-black">
                 <canvas
                     ref={canvasRef}
-                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                    className="absolute inset-0 w-full h-full object-cover"
                 />
                 {children}
             </div>
