@@ -1,50 +1,111 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import { Github, Play, ExternalLink } from 'lucide-react';
 
 const projects = [
     {
-        title: "My Portfolio Website",
-        desc: "A personal portfolio website to showcase my skills, projects, and experiences.",
-        img: "/ProjectImages/Portfolio_image.png",
-        tech: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
+        title: 'ShubhAI',
+        desc: 'A full-stack, microservice-based multi-agent AI platform with specialized agents for chat, web search, coding, PDF/PDF-RAG, image analysis, image generation, and PowerPoint generation.',
+        img: '/ProjectImages/ShubhAI_image.png',
+        tech: [
+            'React',
+            'Node.js',
+            'LangChain',
+            'LangGraph',
+            'MongoDB',
+            'Redis',
+            'Docker',
+            'AWS'
+        ],
         links: {
-            demo: "https://portfolio10-six.vercel.app/",
-            code: "https://github.com/shubh-a11y/Portfolio.git",
-            video: "https://portfolio10-six.vercel.app/"
+            demo: 'https://youtu.be/1QILCHd14gw',
+            code: 'https://github.com/shubh-a11y/ShubhAI.git',
+            video: 'https://youtu.be/1QILCHd14gw'
         }
     },
+
     {
-        title: "ChainCred",
-        desc: "A blockchain-based trust verification system using smart contracts.",
-        img: "/ProjectImages/Chaincred_image.jpeg",
-        tech: ["Solidity", "Next.js", "Ethereum"],
+        title: 'Kernel-Guarded AI Architecture',
+        desc: 'A zero-trust AI architecture that enforces database security independently of LLM prompts using PostgreSQL RLS/CLS, local LLMs, semantic routing, and data visualization.',
+        img: '/ProjectImages/Kernel_image.png',
+        tech: [
+            'Python',
+            'FastAPI',
+            'PostgreSQL',
+            'RLS',
+            'Local LLM',
+            'React',
+            'Three.js'
+        ],
         links: {
-            demo: "#", // Add live link if known
-            code: "https://github.com/shubh-a11y/ChainCred", // Placeholder or from prompt if available
-            video: "https://www.youtube.com/watch?v=w7jUP6GIWoc"
+            demo: 'https://youtu.be/oQo8Dkq-xMw?si=10IkG3dnJIsuDU8r',
+            code: 'https://github.com/shubh-a11y/Kernel-Guarded-AI-Architecture.git',
+            video: 'https://youtu.be/oQo8Dkq-xMw?si=10IkG3dnJIsuDU8r'
         }
     },
+
     {
-        title: "Lumen",
-        desc: "Advanced data visualization dashboard for distributed systems.",
-        img: "/ProjectImages/Lumen_image.jpeg",
-        tech: ["Next JS", "MongoDB", "Node.js"],
+        title: 'AI-Powered Personal Portfolio',
+        desc: 'An AI-powered portfolio with a conversational RAG agent that answers questions about my experience, projects, skills, and background.',
+        img: '/ProjectImages/Portfolio_image.png',
+        tech: [
+            'Next.js',
+            'LangChain',
+            'Pinecone',
+            'Gemini',
+            'RAG'
+        ],
         links: {
-            demo: "#",
-            code: "#",
-            video: "https://www.youtube.com/watch?v=fte-gQ27nQc"
+            demo: 'https://portfolio10-six.vercel.app/',
+            code: 'https://github.com/shubh-a11y/Portfolio.git',
+            video: 'https://portfolio10-six.vercel.app/'
         }
     },
+
     {
-        title: "Medcare",
-        desc: "Comprehensive healthcare management platform with patient tracking.",
-        img: "/ProjectImages/Medcare_image.jpeg",
-        tech: ["MERN Stack"],
+        title: 'ChainCred',
+        desc: 'A blockchain-based trust verification system using smart contracts.',
+        img: '/ProjectImages/Chaincred_image.jpeg',
+        tech: [
+            'Solidity',
+            'Next.js',
+            'Ethereum'
+        ],
         links: {
-            demo: "#",
-            code: "https://github.com/shubh-a11y/Hospital-Management",
-            video: "https://www.youtube.com/watch?v=H08UPDzBQUk"
+            demo: 'https://www.youtube.com/watch?v=w7jUP6GIWoc',
+            code: 'https://github.com/shubh-a11y/ChainCred',
+            video: 'https://www.youtube.com/watch?v=w7jUP6GIWoc'
+        }
+    },
+
+    {
+        title: 'Lumen',
+        desc: 'Advanced data visualization dashboard for distributed systems.',
+        img: '/ProjectImages/Lumen_image.jpeg',
+        tech: [
+            'Next.js',
+            'MongoDB',
+            'Node.js'
+        ],
+        links: {
+            demo: 'https://www.youtube.com/watch?v=fte-gQ27nQc',
+            code: '#',
+            video: 'https://www.youtube.com/watch?v=fte-gQ27nQc'
+        }
+    },
+
+    {
+        title: 'Medcare',
+        desc: 'Comprehensive healthcare management platform with patient tracking.',
+        img: '/ProjectImages/Medcare_image.jpeg',
+        tech: [
+            'MERN Stack'
+        ],
+        links: {
+            demo: 'https://www.youtube.com/watch?v=H08UPDzBQUk',
+            code: 'https://github.com/shubh-a11y/Hospital-Management',
+            video: 'https://www.youtube.com/watch?v=H08UPDzBQUk'
         }
     }
 ];
@@ -53,6 +114,7 @@ export default function Projects() {
     return (
         <section id="my-projects" className="py-24 bg-zinc-950">
             <div className="container mx-auto px-6 md:px-12">
+
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -60,56 +122,109 @@ export default function Projects() {
                     viewport={{ once: true }}
                     className="mb-16"
                 >
-                    <h2 className="text-sm font-mono text-accent mb-2">04. PORTFOLIO</h2>
-                    <h3 className="text-4xl md:text-5xl font-bold">Selected Projects</h3>
+                    <h2 className="text-sm font-mono text-accent mb-2">
+                        04. PORTFOLIO
+                    </h2>
+
+                    <h3 className="text-4xl md:text-5xl font-bold">
+                        Selected Projects
+                    </h3>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                     {projects.map((project, idx) => (
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: idx * 0.1 }}
+                            transition={{
+                                duration: 0.5,
+                                delay: idx * 0.1
+                            }}
                             viewport={{ once: true }}
                             className="group relative rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 hover:border-accent/50 transition-all hover:shadow-[0_0_30px_rgba(255,107,0,0.1)]"
                         >
+
                             <div className="aspect-video overflow-hidden">
-                                <img src={project.img} alt={project.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+
+                                <img
+                                    src={project.img}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                />
 
                                 {/* Overlay Actions */}
                                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                                    {project.links.code && (
-                                        <a href={project.links.code} target="_blank" rel="noopener" className="p-3 bg-zinc-800 rounded-full text-white hover:bg-accent hover:text-white transition-colors" title="View Code">
-                                            <Github className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                    {project.links.video && (
-                                        <a href={project.links.video} target="_blank" rel="noopener" className="p-3 bg-zinc-800 rounded-full text-white hover:bg-accent hover:text-white transition-colors" title="Watch Demo">
-                                            <Play className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                    {project.links.demo && (
-                                        <a href={project.links.demo} target="_blank" rel="noopener" className="p-3 bg-zinc-800 rounded-full text-white hover:bg-accent hover:text-white transition-colors" title="Live Demo">
-                                            <ExternalLink className="w-5 h-5" />
-                                        </a>
-                                    )}
+
+                                    {project.links.code &&
+                                        project.links.code !== '#' && (
+                                            <a
+                                                href={project.links.code}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="p-3 bg-zinc-800 rounded-full text-white hover:bg-accent hover:text-white transition-colors"
+                                                title="View Code"
+                                            >
+                                                <Github className="w-5 h-5" />
+                                            </a>
+                                        )}
+
+                                    {project.links.video &&
+                                        project.links.video !== '#' && (
+                                            <a
+                                                href={project.links.video}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="p-3 bg-zinc-800 rounded-full text-white hover:bg-accent hover:text-white transition-colors"
+                                                title="Watch Demo"
+                                            >
+                                                <Play className="w-5 h-5" />
+                                            </a>
+                                        )}
+
+                                    {project.links.demo &&
+                                        project.links.demo !== '#' && (
+                                            <a
+                                                href={project.links.demo}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="p-3 bg-zinc-800 rounded-full text-white hover:bg-accent hover:text-white transition-colors"
+                                                title="Live Demo"
+                                            >
+                                                <ExternalLink className="w-5 h-5" />
+                                            </a>
+                                        )}
+
                                 </div>
                             </div>
 
                             <div className="p-6">
-                                <h4 className="text-2xl font-bold mb-2">{project.title}</h4>
-                                <p className="text-zinc-400 text-sm mb-4 line-clamp-2">{project.desc}</p>
+
+                                <h4 className="text-2xl font-bold mb-2">
+                                    {project.title}
+                                </h4>
+
+                                <p className="text-zinc-400 text-sm mb-4 line-clamp-2">
+                                    {project.desc}
+                                </p>
+
                                 <div className="flex flex-wrap gap-2">
-                                    {project.tech.map(t => (
-                                        <span key={t} className="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded">
+                                    {project.tech.map((t) => (
+                                        <span
+                                            key={t}
+                                            className="text-xs font-mono text-accent bg-accent/10 px-2 py-1 rounded"
+                                        >
                                             {t}
                                         </span>
                                     ))}
                                 </div>
+
                             </div>
+
                         </motion.div>
                     ))}
+
                 </div>
             </div>
         </section>

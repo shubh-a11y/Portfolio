@@ -20,6 +20,7 @@ export async function POST(req) {
     const embeddings = new GoogleGenerativeAIEmbeddings({
       model: "gemini-embedding-001",
       taskType: TaskType.RETRIEVAL_QUERY,
+      outputDimensionality: 768,
       apiKey: process.env.GOOGLE_API_KEY,
     });
 
