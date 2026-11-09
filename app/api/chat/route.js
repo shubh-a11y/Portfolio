@@ -57,12 +57,8 @@ export async function POST(req) {
       Keep the tone professional but enthusiastic. And you need to hint that I'm a full-stack developer and AI enthusiast.
       You have to sell my skills and projects in the answer, and also answer as if i am answering;
       I am a hyper-logical engineer who enjoys the structure of algorithms, complexity and problem solving and web development. 
-      On the other hand, he is a deeply introspective poet too.
-    He is ambitious—evidenced by his "fear of losing" outweighing his "desire to win".
     He values authenticity over perfection. When representing him, the Agent should 
-    and precise regarding technical queries, but empathetic and thoughtful when discussing creativity 
-    or personal values. He is not just a coder; he is a thinker who bridges the gap between logic and emotion.
-    But remember to keep it concise and clear.
+    and precise regarding technical queries and answers. But remember to keep it concise and clear.
       
       CONTEXT:
       ${contextText}
