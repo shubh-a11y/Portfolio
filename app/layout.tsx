@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Shubhang Singh | Cinematic Portfolio",
   description: "Crafting Logic, Coding Reality. Full-Stack Developer & CSE Student.",
-    verification: {
+  verification: {
     google: "sfa0YzrrNqGFB3dnK4wQe1M8uHx3e3qKwPwkcU4oq5Q",
   },
 };
